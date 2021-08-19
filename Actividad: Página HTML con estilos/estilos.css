@@ -1,0 +1,33 @@
+#title, #name{
+    background-color: #000;
+    color: #fff;
+    
+}
+
+#name{
+    font-size: x-small;
+    color: aqua;
+}
+
+.titulo_Poema{
+    color: #00ff;
+}
+
+#parrafo_1{
+    background-color: blueviolet;
+    color: white;
+}  
+
+.parrafo_2{
+    background-color: tomato;
+    color: white;
+}
+
+#parrafo_3{
+    background-color: teal;
+    color: white;
+}  
+
+
+
+
