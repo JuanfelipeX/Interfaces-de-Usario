@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0%;
+    background-color: black;
+}
+
+.reloj{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    border: 15px solid #ff5f5f;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: -2px 2px 5px #ff5f5f , inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.reloj:before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 3px );
+    left: 50%;
+    width: 40%;
+    height: 6px;
+    background: #262626;
+    animation: animate 4s linear infinite;
+    transform-origin: left;
+    box-shadow: -2px 2px 5px #262626 , inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
