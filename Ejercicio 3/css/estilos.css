@@ -1,0 +1,12 @@
+
+.first_Code{
+    font-weight: bold;
+}
+
+.second_Code{
+    text-decoration: line-through;
+}
+
+[id="third"]{
+    color: aqua;
+}
