@@ -10,3 +10,13 @@
 [id="third"]{
     color: aqua;
 }
+
+a:active{
+    background-color: brown;
+}
+
+.une:hover{
+    font-size: xx-small;
+    display: none;
+}
+
