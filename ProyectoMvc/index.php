@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> <?php echo "Hola papu"; ?> </h1>
-
+    <a href="Controller/UsuariosController.php">Usuarios</a>
+    <a href="Views/VistaNuevoUsuario.php">Nuevo Usuario</a>
 </body>
 </html>
