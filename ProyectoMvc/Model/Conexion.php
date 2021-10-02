@@ -1,13 +1,17 @@
 <?php
 class Conexion{
-    private $con;
+    public static function conectar(){
+        try {
+            $con = pg_connect("host=127.0.01
+                               port=5432
+                               dbname=DU-Class
+                               user=postgres
+                               password=juanfelipe44") or die ('no se ha podido conectar: ' .pg_last_error());
+            return $con;
 
-    function __construct(){
-        $this-> new mysqli("localhost", "root", "juanfelipe44", "proyectoMvc");
-    }
-    
-    function getCon(){
-        return $this->con;
+        } catch (Exception $e) {
+            echo $e -> getMessage();
+        }
     }
 }
 ?>

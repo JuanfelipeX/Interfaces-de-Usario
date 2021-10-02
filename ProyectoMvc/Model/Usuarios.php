@@ -1,5 +1,7 @@
 <?php
 
+
+///*
 require("./Model/conexion.php"); //especie de import 
 class Usuarios{
 
@@ -33,6 +35,46 @@ class Usuarios{
             echo "error";
         }
     }
+
+    public function deleteUsuario($usuario){
+        $sql = "DELETE FROM usuarios WHERE usuario= '$usuario'";
+
+         if($this->con->getCon()->query($sql)){
+            echo "eliminacion exitosa";
+
+        }else {
+            echo "error" .sql;
+        }
+    }
+
+    public function updateUsuario($usuario, $nombre, $clave){
+
+        $sql="UPDATE usuario SET nombre='$nombre', clave='$clave' WHERE usuario='$usuario'";
+        if($this->con->getCon()->query($sql)){
+            echo "modificacion exitosa";
+
+        }else {
+            echo "error" .sql;
+        }
+    }
 }
+//*/
+
+/*
+
+include_once ("Conexion.php");
+
+//Inserccion de datos en las tablas de  pgmolder
+class Cpersona{
+    function insertar($usuario, $nombre, $clave){
+        return pg_query(Connection::conectar(), "INSERT INTO campos_formulario VALUES(default,
+                                                                                     '$usuario',
+                                                                                     '$nombre',
+                                                                                     '$clave')");
+
+    }
+}
+
+*/
 
 ?>

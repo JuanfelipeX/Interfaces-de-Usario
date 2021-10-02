@@ -24,7 +24,7 @@
         <input type="password" name="clave" id="clave" placeholder= "Escriba su clave">
     </div>
 
-    <input type="hidden" name="registrarse">
+    <input type="hidden" name="actualizaUsuario">
 
     <button>Enviar</button>
 

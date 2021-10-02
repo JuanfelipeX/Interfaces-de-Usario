@@ -9,5 +9,7 @@
 <body>
     <a href="Controller/UsuariosController.php">Usuarios</a>
     <a href="Views/VistaNuevoUsuario.php">Nuevo Usuario</a>
+    <a href="Views/VistaEliminaUsuario.php">Eliminar Usuario</a>
+    <a href="Views/VistaActualizarUsuario.php">Actualizar Usuario</a>
 </body>
 </html>

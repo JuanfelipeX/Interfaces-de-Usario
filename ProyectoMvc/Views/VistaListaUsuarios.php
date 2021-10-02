@@ -20,9 +20,9 @@
 
        <table>
             <thead>
-                <td>Usuario</td>
-                <td>Contraseña</td>
-                <td>Nombre</td>
+                <td>u   suario</td>
+                <td>nombre</td>
+                <td>clave</td>
             </thead>
             <tbody>
                 <?php
