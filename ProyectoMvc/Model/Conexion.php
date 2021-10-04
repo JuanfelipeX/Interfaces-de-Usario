@@ -1,4 +1,6 @@
 <?php
+
+/*
 class Conexion{
     public static function conectar(){
         try {
@@ -14,4 +16,19 @@ class Conexion{
         }
     }
 }
+
+*/
+
+class Conexion  {
+    private $con;
+    function __construct()
+    {
+        $this->con = new mysqli("localhost", "root", "", "ProyectoMvc");
+    }
+
+    function getCon()
+    {
+        return $this->con;
+    }
+
 ?>

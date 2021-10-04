@@ -20,7 +20,7 @@
 
        <table>
             <thead>
-                <td>u   suario</td>
+                <td>usuario</td>
                 <td>nombre</td>
                 <td>clave</td>
             </thead>

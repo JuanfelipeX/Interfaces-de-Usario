@@ -1,28 +1,33 @@
 <?php
 
-///*
 require("../Model/Usuarios.php");
 
 $usu = new Usuarios();
 
-if(isset($_POST["nuevoUsuario"])){
-$usu->newUsuario($_POST["nuevoUsuario"],
-                 $_POST["usuario"],
-                 $_POST["nombre"],
-                 $_POST["clave"]
-                );
-} else if (isset($_POST["eliminarUsuario"]) {
-   
-        $usu->deleteUsuario($_POST["usuario"])
-    } else if(isset($_POST["actualizaUsuario"]) {
-        $usu->deleteUsuario($_POST["usuario"])
-
+if (isset($_POST["nuevoUsuario"])) {
+    $usu->newUsuario(
+        $_POST["usuario"],
+        $_POST["nombre"],
+        $_POST["clave"]
+    );
+} else {
+    if (isset($_POST["eliminaUsuario"])) {
+        $usu->deleteUsuario(
+            $_POST["usuario"]
+        );
+    } else {
+        if (isset($_POST["actualizaUsuario"])) {
+            $usu->ejemploUpdateUsuario(
+                $_POST["usuario"],
+                $_POST["nombre"],
+                $_POST["clave"]
+            );
+        } else {
+            $listaUsuarios = $usu->getUsuarios();
+            require("../Views/VistaListaUsuarios.php");
+        }
     }
 }
-
-    $listaUsuarios = $usu->getUsuarios();
-    require("../Views/VistaListaUsuarios.php"); 
-
 //$usu->newUsuario('pepito', 'Pepe', '123');
 
 //*/

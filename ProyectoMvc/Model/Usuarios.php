@@ -1,21 +1,19 @@
 <?php
 
-
-///*
-require("./Model/conexion.php"); //especie de import 
-class Usuarios{
+require("../Model/Conexion.php");
+class Usuarios
+{
 
     private $con;
 
-    function __construct(){
-        $this-> = new Conexion();
+    function __construct()
+    {
+        $this->con = new Conexion();
     }
-
-    public function getUsuarios(){
-        
+    public function getUsuarios()
+    {
         $query = $this->con->getCon()->query("SELECT * FROM usuarios");
         $usuarios = [];
- 
         $cont = 0;
         while ($fila = $query->fetch_assoc()) {
             $usuarios[$cont] = $fila;
@@ -23,43 +21,49 @@ class Usuarios{
         }
         return $usuarios;
     }
-
     public function newUsuario($usuario, $nombre, $clave){
-        $sql = "INSERT INTO usuarios (usuario, clave, nombre)
-        VALUES ('$usuario', '$clave', '$nombre')";
 
-        if($this->con->getCon()->query($sql)){
-            echo "inserccion exitosa";
-
-        }else {
-            echo "error";
+        //$sql = "INSERT INTO usuarios('usuario','clave','nombre') 
+        //Values($usuario,$clave,$nombre);"
+        $sql = "INSERT INTO usuarios Values('$usuario','$clave','$nombre')";
+        if ($this->con->getCon()->query($sql)) {
+            echo "Insercion exitosa";
+        } else {
+            echo " Error ejecutando consulta de insercion";
+            echo "SQL:" . $sql;
         }
     }
 
     public function deleteUsuario($usuario){
-        $sql = "DELETE FROM usuarios WHERE usuario= '$usuario'";
+        $sql = "DELETE FROM usuarios WHERE  usuario='$usuario'";
+        if ($this->con->getCon()->query($sql)) {
 
-         if($this->con->getCon()->query($sql)){
-            echo "eliminacion exitosa";
+            echo "Eliminación exitosa";
+        } else {
 
-        }else {
-            echo "error" .sql;
+            echo "Error ejecutando consulta de eliminación.";
+
+            echo "SQL: " . $sql;
         }
     }
 
-    public function updateUsuario($usuario, $nombre, $clave){
+    public function ejemploUpdateUsuario($usuario, $nombre, $clave){
+        $sql="UPDATE usuarios SET nombre='$nombre',clave='$clave'
+        where usuario='$usuario' ";
+        
+        if ($this->con->getCon()->query($sql)) {
 
-        $sql="UPDATE usuario SET nombre='$nombre', clave='$clave' WHERE usuario='$usuario'";
-        if($this->con->getCon()->query($sql)){
-            echo "modificacion exitosa";
+            echo "actualización exitosa";
+        } else {
 
-        }else {
-            echo "error" .sql;
+            echo "Error ejecutando consulta de actualización.";
+
+            echo "SQL: " . $sql;
         }
     }
 }
-//*/
 
+//*/
 /*
 
 include_once ("Conexion.php");
@@ -74,7 +78,6 @@ class Cpersona{
 
     }
 }
-
 */
 
 ?>
