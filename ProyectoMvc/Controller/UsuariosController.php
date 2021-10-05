@@ -4,7 +4,7 @@ require("../Model/Usuarios.php");
 
 $usu = new Usuarios();
 
-if (isset($_POST["nuevoUsuario"])) {
+if (isset($_POST["registrarse"])) {
     $usu->newUsuario(
         $_POST["usuario"],
         $_POST["nombre"],
