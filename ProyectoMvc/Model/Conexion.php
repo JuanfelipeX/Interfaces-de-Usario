@@ -30,5 +30,6 @@ class Conexion  {
     {
         return $this->con;
     }
+}
 
 ?>
