@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        <form action="../Controller/ControllerProducto.php" method="POST"> 
 
        <table>
             <thead>
