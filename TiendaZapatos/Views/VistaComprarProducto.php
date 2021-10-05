@@ -9,6 +9,8 @@
 <body>
     <form action="../Controller/ControllerProducto.php" method="POST"> 
 
+    <h3>Rellene los datos del producto por favor</h3>
+
     <div>
         <label for="id">Id</label>
         <input type="text" name="id" id="id" placeholder= "Escriba el id">

@@ -9,12 +9,14 @@
 <body>
     <form action="../Controller/ControllerProducto.php" method="POST"> 
 
+    <h3>Ingrese el numero de id del producto para modificar</h3>
+
     <div>
         <label for="id">Id</label>
         <input type="text" name="id" id="id" placeholder= "Escriba el id">
     </div>
 
-    <H3>Rellene los siguientes datos para modificar</H3>
+    <H3>Rellene los siguientes datos para modificar el producto</H3>
 
      <div>
         <label for="nombre">Nombre</label>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Zapatos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <h1>Bienvenido a Nuestra Zapateria</h1>
@@ -12,7 +13,7 @@
     
     <ul>
         <li>
-            <a href="Views/VistaComprarProducto.php">Comprar producto</a>
+            <a href="Views/VistaComprarProducto.php">Registrar producto</a>
         </li>
         
         <li>
