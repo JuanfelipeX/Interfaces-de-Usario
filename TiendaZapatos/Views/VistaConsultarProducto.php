@@ -33,7 +33,7 @@
                     echo "<td>".$producto['talla']."</td>";
                     echo "<td>".$producto['precio']."</td>";
                     echo "</tr>";
-                }
+                } // nose porque no se muestran los datos, pero en la base de datos PHPMyADMIN si inserta datos, borra y modifica
                 ?>
             </tbody>
         </table>
