@@ -16,7 +16,7 @@ if (isset($_POST["registrarse"])) {
             $_POST["usuario"]
         );
     } else {
-        if (isset($_POST["actualizaUsuario"])) {
+        if (isset($_POST["eliminarUsuario"])) {
             $usu->ejemploUpdateUsuario(
                 $_POST["usuario"],
                 $_POST["nombre"],
