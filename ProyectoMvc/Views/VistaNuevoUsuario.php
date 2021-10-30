@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php
+include ("header.php");
+?>
+
     <form action="../Controller/UsuariosController.php" method="POST">
 
-    <div>
-        <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" id="usuario" placeholder= "Escriba su usuario">
+    <div class="form-group">
+      <label for="usuario" class="form-label mt-4">Escriba su usuario</label>
+      <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Escriba su usuario">
+      <small id="usuario" class="form-text text-muted"></small>
     </div>
 
-     <div>
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder= "Escriba su nombre">
+    <div class="form-group">
+      <label for="nombre" class="form-label mt-4">Escriba su nombre</label>
+      <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Escriba su nombre">
+      <small id="nombre" class="form-text text-muted"></small>
     </div>
 
-     <div>
-        <label for="clave">Clave</label>
-        <input type="password" name="clave" id="clave" placeholder= "Escriba su clave">
+  
+    <div class="form-group">
+      <label for="clave" class="form-label mt-4">Escriba su clave</label>
+      <input type="password" class="form-control" id="clave" aria-describedby="emailHelp" placeholder="Escriba su clave">
+      <small id="clave" class="form-text text-muted"></small>
     </div>
 
     <input type="hidden" name="registrarse">
 
-    <button>Enviar</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 
     </form>
-    
-</body>
-</html>
+    <?php
+include("footer.php");
+?>

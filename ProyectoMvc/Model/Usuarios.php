@@ -27,7 +27,8 @@ class Usuarios
         //Values($usuario,$clave,$nombre);"
         $sql = "INSERT INTO usuarios Values('$usuario','$clave','$nombre')";
         if ($this->con->getCon()->query($sql)) {
-            echo "Insercion exitosa";
+          //  echo "Insercion exitosa";
+          header("Location: ../Controller/UsuariosController.php"); 
         } else {
             echo " Error ejecutando consulta de insercion";
             echo "SQL:" . $sql;

@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="Views/Bienvenida.php">Bienvenida</a>
     <a href="Controller/UsuariosController.php">Usuarios</a>
     <a href="Views/VistaNuevoUsuario.php">Nuevo Usuario</a>
     <a href="Views/VistaEliminaUsuario.php">Eliminar Usuario</a>
